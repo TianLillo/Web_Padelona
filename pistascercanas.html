@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>PadeLona</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEB1plSzdQgv2oSvyvPT99BHmhJpG8Cys&v=3.exp"></script>
+	<script src="clubes.js"></script>
+        <script type="text/javascript">
+			var map;
+            function initialize() {
+                var mapOptions = {
+                    zoom: 12,
+					center: new google.maps.LatLng(41.403952, 2.185661),
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+					mapOptions);			
+                
+                for (i = 0; i<clubsLocation.length; i++)  {  
+
+                    var point = new google.maps.LatLng(clubsLocation[i].latitude,clubsLocation[i].longitude);
+                    var pOptions = {
+                        position: point, 
+                        map: map, 
+                        title: clubsLocation[i].name
+                    };
+                    var markerStation = new google.maps.Marker(pOptions);
+                    
+                        var infoWOpt = {
+                            content: '<div class="clubes">'
+                                        +'<h2>'+ clubsLocation[i].name + '</h2>'
+                        };
+                        var infoW = new google.maps.InfoWindow(infoWOpt);
+                        google.maps.event.addListener(markerStation, 'click', function (event) {
+                            infoW.open(map, markerStation);
+                        });
+                    }    
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>	
+    </head>	
+<body>
+	<div class="header">
+		<p><a href="inicio.html"><img src="img/logo_pelota.png" /></a></p>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a href="inicio.html">Inicio</a></li>
+			<li><a href="pistascercanas.html">Pistas cercanas</a></li>
+			<li><a href="mapa.html">Tienda</a></li>
+		</ul>
+	</div>
+  <img class="img-fondo"  src="img/cesped-fondo2.png" >
+  <img class="img-fondo2"  src="img/cesped-fondo2.png" >
+
+	<div class="wrapper">
+		<h1>Encuentra tu club más cercano</h1>
+        <div id="map-canvas"></div>
+	</div>
+
+  <div class="bottom">
+    <p>Proyecto creado con fines educativos<br>
+    Programación SIG en entornos WEB<br>
+    Master Sistemas de información geográfica 2022-2023</p>
+    <a href="https://www.talent.upc.edu/"><img class="bottom-img" src="img/logo_upc.png"></a>
+  </div>
+
+  <button class="promo-code-button" id="modal_btn1">
+    <p class="promo-code-text">¡DESCUENTO!</p>
+  </button>
+
+  </div>
+  <div id="modal_container">
+  </div>
+  <script>
+
+  const modal_container = document.getElementById("modal_container")
+  const modal_btn1 = document.getElementById("modal_btn1")	
+  
+  modal_btn1.addEventListener("click", () => {
+    createModal(`
+    <h2>FELICIDADES</h2>
+    <p>Ya tienes tu códido de descuento: <strong>PADELONA30%</strong> el que puedes utilizar en nuestra tienda.</p>
+    <img class="modal-img" src="img/30off.png">
+    `, "modal-desdeArriba")
+  })
+
+  const createModal = (content = "sin contenido", style = "") => {
+    modal_container.innerHTML = `
+    <div class="modal" id="modal">
+      <div class="modal-content ${style}">
+      ${content}
+      <button class="modal-btn-closed" id="close-button">Ya lo tengo</button>
+      </div>
+    </div>
+    `
+
+    document.getElementById("modal").addEventListener("click", (e) => {
+    console.log(e.target.id)
+    if (e.target.id === "modal" || e.target.id === "close-button") {
+      modal_container.innerHTML = ""
+    }
+    })
+  }
+  </script>
+	</body>
+</html>

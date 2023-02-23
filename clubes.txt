@@ -1,0 +1,11 @@
+var Club-1 = { lat: 41.425268, lng: 2.204492, name: 'PADEL VIU' };
+var Club-2 = { lat: 41.437109, lng: 2.184129, name: 'FES PADEL CAN DRAGO' };
+var Club-3 = { lat: 41.399715, lng: 2.193497, name: 'PADEL 7 GLORIES' };
+var Club-4 = { lat: 41.412054, lng: 2.213671, name: 'PADEL MARESME' };
+var Club-5 = { lat: 41.413285, lng: 2.193939, name: 'ESPRONCEDA PADEL' };
+var Club-6 = { lat: 41.435113, lng: 2.152235, name: 'UNO PADEL MEILAND' };
+var Club-7 = { lat: 41.435701, lng: 2.154079, name: 'NICK PADEL CLUB' };
+var Club-8 = { lat: 41.426017, lng: 2.197866, name: 'PADEL 7 SAN ADREU' };
+var Club-9 = { lat: 41.373608, lng: 2.188728, name: 'CLUB NATACIO BARCELONA' };
+var Club-10 = { lat: 41.361982, lng: 2.145192, name: 'LETS PADEL MONTJUIC' };
+var Club-11 = { lat: 41.353286, lng: 2.134812, name: 'FAIR PLAY PADEL CLUB' };

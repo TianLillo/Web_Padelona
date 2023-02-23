@@ -1,0 +1,52 @@
+-INICIO-
+					Pade
+						-L-
+							ona (logo)
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Inicio	(HTML actual)	-	Pistas que tengo cerca (HTML map todas)	-	Tienda de accesorios (HTML productos sencilla)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+			  --MENSAJE DE PRESENTACION DE LA PAGINA WEB--				
+
+
+				Pista 1 **DESTACADA** --> mas info (HTML propia)
+
+				Pista 2		      --> mas info (HTML propia)
+
+				Pista 3		      --> mas info (HTML propia)
+
+				Pista...	      --> mas info (HTML propia)
+
+				Pista 10	      --> mas info (HTML propia)
+
+
+
+
+			    -- CODIGO DE DESCUENTO EN ACCESORIOS --
+###################################################################################################################################
+-PISTAS QUE TENGO CERCA-
+					Pade
+						-L-
+							ona (logo)
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Inicio	(HTML actual)	-	Pistas que tengo cerca (HTML map todas)	-	Tienda de accesorios (HTML productos sencilla)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+				*MAPA CON ARRAY DE PISTAS FULL SCREEN*
+				-Onclick display de informacion sencilla 
+				-Mas info
+				-Como llegar
+
+
+
+
+
+
+
+
