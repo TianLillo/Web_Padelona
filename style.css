@@ -14,26 +14,27 @@ strong { font-size:14px; font-weight:bold; color:#000000; }
 a { background-color:#0000ff; color:#ffffff; }
 hr { clear:both; height:0; line-height:0; margin:0; padding:0; border:0; filter:alpha(opacity=0); }
 
-div.header { position:fixed; left:0; top:0; right:0; height:100px; z-index:100; background-color: #f1f1f1;}
-    div.header p { position:absolute; top:50%; left:0px; margin-top:-50px; background-color: rgb(0, 255, 187);}
+div.header { position:fixed; left:0; top:0; right:0; height:80px; z-index:100; background-color: #f1f1f1;}
+    div.header p { position:absolute; top:50%; left:0px; margin-top:-50px;}
     
 
-div.menu { position:fixed; left:0; top:100px; right:0; height:30px; text-align:center; z-index:100; background-color:#007ac0; border-top: solid 2px #ffffff; }
+div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:center; z-index:100; background-color:#007ac0; border-top: solid 2px #ffffff; }
     div.menu ul { padding-top: 7px; }
          div.menu ul li { display:inline-block; margin-right:20px; }
          div.menu ul li a { font-weight: bold; text-decoration:none; background-color:transparent; }
          div.menu ul li a:hover { color:rgb(0, 0, 0); }
 
-.bottom { position:relative; left:0; bottom: 0px; right:0; height:100px; text-align:center; z-index:100; background-color:#007ac0; }
+.bottom { position:relative; left:0; bottom: 0px; right:0; height:80px; text-align:center; z-index:100; background-color:#007ac0; }
   div.bottom p { position:absolute; top: 20px; left:40%; color: white; font-size: 12; font-style: oblique; text-align: center;}
 .bottom-img { position: absolute; height: 60px; top: 20px; left: 30px;}
 
-.img-fondo { position: fixed; z-index: -1;left: 0px; top:130px; width: 620px; height: 635px;}
-.img-fondo2 { position: fixed; z-index: -1;right: -30px; top:130px; width: 620px; height: 635px;}
+.img-fondo { position: fixed; z-index: -1;left: 0px; top:110px; width: 620px; height: 650px;}
+.img-fondo2 { position: fixed; z-index: -1;right: -30px; top:110px; width: 620px; height: 650px;}
 
-.wrapper {  width:920px; padding:20px; margin:auto; margin-top:130px; margin-bottom:0px; background-color:#f1f1f1; border:solid 2px #000000; border-top:none; border-bottom:none }
+.wrapper {  width:920px; padding:20px; margin:auto; margin-top:110px; margin-bottom:0px; background-color:#f1f1f1; border:solid 2px #000000; border-top:none; border-bottom:none }
 
 #map-canvas { height:500px; width: 900px; position: fixed;top: 10px; bottom: 10px; left: 10px;}
+
 
 .more-info { font-size:18px; }
 .promoted-product-item { float: center; position: relative; font-size:20px; width:600px; padding:20px 20px 40px 20px; margin:auto; 
@@ -43,7 +44,7 @@ div.menu { position:fixed; left:0; top:100px; right:0; height:30px; text-align:c
 .promoted-product-item-img-container { position:relative; top:10px; left: 50px; }
 .promoted-product-item-img { width:500px;}
 .promoted-product-item-text { margin-bottom:0; }
-.promoted-product-item:hover { top:-4px; background-color:rgba(46, 197, 59, 0.43); }
+.promoted-product-item:hover { top:-4px; background-color:rgba(83, 114, 214, 0.415); }
 
 .product-detail { font-size:20px; width:400px; padding:20px 20px 40px 20px; margin:auto; margin-bottom:20px; 
                 border:solid 10px #ff0000;	color:#ffffff; background-color:blueviolet;
@@ -54,7 +55,7 @@ div.menu { position:fixed; left:0; top:100px; right:0; height:30px; text-align:c
 
 .product-item { float:left; position:relative; padding:10px 10px 10px 225px; margin-bottom:20px; margin-right:20px; width:200px;
                 height:135px; border:solid 1px #000000; border-radius:10px 0; top:0; transition: top 0.5s;}
-.product-item:hover { top:-2px;}
+.product-item:hover {background-color:rgba(102, 131, 216, 0.208)}
 .product-item-img-container { position:absolute; top:10px; left:10px; }
 .product-item-img { width:200px; height: 140px}
 .product-item-text { margin-bottom:0; }
@@ -98,3 +99,4 @@ div.menu { position:fixed; left:0; top:100px; right:0; height:30px; text-align:c
   @keyframes desdeAbajo {from { transform: translateY(50vh); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
   }
+  
