@@ -19,23 +19,29 @@ div.header { position:fixed; left:0; top:0; right:0; height:80px; z-index:100; b
     div.header img { height: 80px; width: 150px;}
     
 
-div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:center; z-index:100; background-color:#007ac0; border-top: solid 0px #ffffff; }
-    div.menu ul { padding-top: 7px; }
-         div.menu ul li { display:inline-block; margin-right:20px; }
-         div.menu ul li a { font-weight: bold; text-decoration:none; background-color:transparent; }
-         div.menu ul li a:hover { color:rgb(0, 0, 0); }
+div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:center; z-index:100; background-color:#007ac0;}
+    div.menu ul { padding-top: 7px; align-items: center;}
+         div.menu ul li { display: inline-block; padding-left: 40px; padding-right:40px; padding-bottom: 0px; text-align: left; color: #ffffff;}
+         div.menu ul li a { font-weight: bold; text-decoration:none; background-color:transparent; display: block;}
+         div.menu ul li a:hover {color:#000000;}
+             
+        .nav li ul { background-color:#007ac0; display:none; position:fixed; min-width:220px;}
+        .nav li:hover > ul {display:block; padding-top: 0px; padding-bottom: 15px;}
+        .nav li ul li { position:relative; width:200px;display:block; padding-top: 20px; left: -20px;}
 
+        
+        
 .bottom { position:relative; left:0; bottom: 0px; right:0; height:80px; text-align:center; z-index:100; background-color:#007ac0; }
   div.bottom p { position:absolute; top: 10px; left:40%; color: white; font-size: 12; font-style: oblique; text-align: center;}
 .bottom-img-upc { position: absolute; height: 60px; top: 0px; left: -600px;}
 .bottom-img-logo { position: absolute; height: 50px; top: 6px; left: -380px;}
 
 .img-fondo { position: fixed; z-index: -1;left: 0px; top:110px; width: 620px; height: 655px;}
-.img-fondo2 { position: fixed; z-index: -1;right: -30px; top:110px; width: 620px; height: 655px;}
+.img-fondo2 { position: fixed; z-index: -1;right: -50px; top:110px; width: 620px; height: 655px;}
 
-.wrapper {  width:920px; padding:20px; margin:auto; margin-top:110px; margin-bottom:0px; background-color:#f1f1f1; border:solid 2px #000000; border-top:none; border-bottom:none }
+.wrapper {  width:1000px; padding:20px; margin:auto; margin-top:110px; margin-bottom:0px; background-color:#f1f1f1; border:solid 2px #000000; border-top:none; border-bottom:none }
 
-#map-canvas { height:500px; width: 900px; position: fixed;top: 10px; bottom: 10px; left: 10px;}
+#map-canvas { height:550px; width: 1000px; position: fixed; top: -15px;}
 
 
 .more-info { font-size:18px; }
