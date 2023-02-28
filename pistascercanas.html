@@ -63,23 +63,39 @@
                 
                 for (i = 0; i<clubsLocation.length; i++)  {  
 
-                    var point = new google.maps.LatLng(clubsLocation[i].latitude,clubsLocation[i].longitude);
-                    var pOptions = {
-                        position: point, 
-                        map: map, 
-                        title: clubsLocation[i].name
-                    };
+                  {
+                    createStation(i);
+                  }					
+      }
+      var currentInfoWindow = null;
+      function createStation(i) {
+        var point = new google.maps.LatLng(clubsLocation[i].latitude, clubsLocation[i].longitude);
+        var pOptions = {
+          position: point, 
+          map: map, 
+          title: clubsLocation[i].name
+        };
                     var markerStation = new google.maps.Marker(pOptions);
                     
                         var infoWOpt = {
                             content: '<div class="clubes">'
-                                        +'<h2>'+ clubsLocation[i].name + '</h2>'
+                                        +'<h2>'+ clubsLocation[i].name + '</h2>' 
+                                        +'<p><strong>Dirección :</strong> ' + clubsLocation[i].addres + '</p>'
+                                        +'<p><strong>Teléfono :</strong> ' + clubsLocation[i].phone + '</p>'
+                                        + '<img class="map-product-img" src="' + clubsLocation[i].img + '" />' 
                         };
-                        var infoW = new google.maps.InfoWindow(infoWOpt);
+
+                        var infoWindow  = new google.maps.InfoWindow(infoWOpt);
                         google.maps.event.addListener(markerStation, 'click', function (event) {
-                            infoW.open(map, markerStation);
-                        });
+                          if (currentInfoWindow != null) {
+                              currentInfoWindow.close();}
+                              infoWindow.open(map, markerStation);
+                              currentInfoWindow = infoWindow;
+                              });
+                              
+                            
                     }    
+
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
