@@ -43,8 +43,11 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 
 #map-canvas { height:550px; width: 1000px; position: fixed; top: -15px;}
 
+.clubes { font-size:12px; width: 450px; height: 180px;}
+.link-moreinfo { font-size:12px; color: blue; font-weight: 900;}
+.map-product-img{position: fixed; right: 10px;top: 50px; height: 130px;}
 
-.more-info { font-size:18px; }
+.more-info { font-size:18px;}
 .promoted-product-item { float: center; position: relative; font-size:20px; width:600px; padding:20px 20px 40px 20px; margin:auto; 
                     margin-bottom: 20px; border:solid 5px; color: #000000; color: #000000; background-color:rgba(102, 131, 216, 0.208);
                     -webkit-box-shadow: 4px 6px 5px 0px rgb(67, 68, 67); -moz-box-shadow: 4px 6px 5px 0px rgb(53, 53, 53);
@@ -67,6 +70,27 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 .product-item-img-container { position:absolute; top:10px; left:10px; }
 .product-item-img { width:200px; height: 140px}
 .product-item-text { margin-bottom:0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.club-item {float: left;left: 20px; position:relative; padding:10px 10px 10px 10px; margin-bottom:20px; margin-right:20px; width:450px;
+            height:200px; border:solid 1px #000000; border-radius: 15px ; top:0;}
+.club-item:hover {background-color:rgba(102, 131, 216, 0.208)}
+.club-item-img-container { position:absolute; top:45px; left:15px; }
+.club-item-img {position: relative;width:200px; height: 150px; border-radius: 10px;}
+.club-item-text {position: absolute; top:45px;left: 250px;right: 25px; margin-bottom:0; font-size: 16; font-weight: 400;}
+
 
 .product-main-image { float:right; margin-left:20px; }
 

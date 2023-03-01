@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>PadeLona 🎾</title>
+	<title>PadeLona 🎾-Pistas cercanas-</title>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
@@ -77,13 +77,15 @@
           title: clubsLocation[i].name
         };
                     var markerStation = new google.maps.Marker(pOptions);
-                    
+
                         var infoWOpt = {
                             content: '<div class="clubes">'
+
                                         +'<h2>'+ clubsLocation[i].name + '</h2>' 
-                                        +'<p><strong>Dirección :</strong> ' + clubsLocation[i].addres + '</p>'
-                                        +'<p><strong>Teléfono :</strong> ' + clubsLocation[i].phone + '</p>'
-                                        + '<img class="map-product-img" src="' + clubsLocation[i].img + '" />'
+                                        +'<p><strong>Dirección: </strong> ' + clubsLocation[i].addres + '</p>'
+                                        +'<p><strong>Teléfono: </strong> ' + clubsLocation[i].phone + '</p>'
+                                        +'<p><a class="link-moreinfo" href="clubes.html">Más información y como llegar</a></p>'
+                                        +'<img class="map-product-img" src="' + clubsLocation[i].img + '" />'
                                         
                         };
 
