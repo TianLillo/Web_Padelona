@@ -70,13 +70,15 @@
       var currentInfoWindow = null;
       function createStation(i) {
         var point = new google.maps.LatLng(clubsLocation[i].latitude, clubsLocation[i].longitude);
+        let cond
+
         var pOptions = {
           position: point, 
           map: map, 
           title: clubsLocation[i].name
         };
                     var markerStation = new google.maps.Marker(pOptions);
-
+                    if (clubsLocation[i].route)  { cond = '<p><a class="link-moreinfo" href="'+ clubsLocation[i].route +'">Cómo llegar</a></p>' } else {cond = '<p style={display:none}</p>'}
                         var infoWOpt = {
                             content: '<div class="clubes">'
 
@@ -84,6 +86,7 @@
                                         +'<p><strong>Dirección: </strong> ' + clubsLocation[i].addres + '</p>'
                                         +'<p><strong>Teléfono: </strong> ' + clubsLocation[i].phone + '</p>'
                                         +'<p><a class="link-moreinfo" href="'+ clubsLocation[i].web +'">Más información</a></p>'
+                                        +cond
                                         +'<img class="map-product-img" src="' + clubsLocation[i].img + '" />'                                        
                         };
 
@@ -125,7 +128,6 @@
         </ul>
       </li>
       <li><a id="link" href="pistascercanas.html">Pistas cercanas</a></li>
-      <li><a id="link" href="store.html">Tienda</a></li>
     </ul>
   </div>
   <img class="img-fondo"  src="img/cesped-fondo2.png" >
@@ -163,7 +165,7 @@
   modal_btn1.addEventListener("click", () => {
     createModal(`
     <h2>FELICIDADES</h2>
-    <p>Ya tienes tu códido de descuento: <strong>PADELONA30%</strong> el que puedes utilizar en nuestra tienda.</p>
+    <p>Ya tienes tu códido de descuento: <strong>PADELONA30%</strong> el que puedes utilizar en tu próxima reserva en alguno de estos clubes.</p>
     <img class="modal-img" src="img/30off.png">
     `, "modal-desdeArriba")
   })

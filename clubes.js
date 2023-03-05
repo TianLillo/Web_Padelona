@@ -7,7 +7,7 @@ var clubsLocation = [{
 	"phone": "+34 932 21 00 10",
 	"img": "img/pista1.png",
 	"web": "clubbarceloneta.html",
-	"route": "comollegar.html"
+	"route": "route.html"
 	},
 	{
 		"id": "2",

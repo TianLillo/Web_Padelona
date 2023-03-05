@@ -51,6 +51,7 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 
 .clubes { font-size:12px; width: 450px; height: 180px;}
 .link-moreinfo { font-size:12px; color: blue; font-weight: 900; text-decoration: underline;}
+.link-comoLlegar {font-size:16px; color: blue; font-weight: 900; text-decoration: underline;}
 .map-product-img{position: fixed; right: 10px;top: 50px; height: 130px;}
 
 .more-info { font-size:18px;}
@@ -88,10 +89,10 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 .club-item-img {position: relative;width:200px; height: 150px; border-radius: 10px;}
 .club-item-text {position: absolute; top:45px;left: 250px;right: 25px; margin-bottom:0; font-size: 16; font-weight: 400;}
 
-.club-main{height: auto; margin-bottom: 30px;}
-.club-main-img {position: relative; width:500px; float: left; padding-left: 20px; padding-right: 20px;}
+.club-main{ margin-bottom: 30px;}
+.club-main-img {position: relative;max-height: 260px; max-width: 500px;float: left; padding-left: 20px; padding-right: 20px;}
 .club-profesor{ padding-top: 80px; height: auto; padding-left: 20px; padding-bottom: 80px;}
-.club-profesor-img {position: relative; height:300px;width: 500px; float: right;right: 30px; padding-left: 50px;}
+.club-profesor-img {position: relative; max-height:300px;max-width: 500px; float: right;right: 30px; padding-left: 50px;}
 .club-pistas{padding-top: 80px; height: auto; text-align: justify; padding-left: 30px; padding-right: 30px;}
 .club-pistas-img {position: relative; height:200px; width: 280px; float: left; padding-left: 15px;padding-right: 15px ;padding-bottom: 30px;}
 

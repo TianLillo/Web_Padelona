@@ -61,7 +61,7 @@
                 map = new google.maps.Map(document.getElementById('map-canvas-route'),
                     mapOptions);
 					
-				var polpoints = [ 
+				        var polpoints = [ 
                     new google.maps.LatLng(41.38235824929469,2.18586426794132), 
                     new google.maps.LatLng(41.38206012083035,2.186575203549044),
                     new google.maps.LatLng(41.38133138735792,2.186934866192292),
@@ -71,14 +71,41 @@
                     new google.maps.LatLng(41.37370075270262,2.188753319579781),
                     new google.maps.LatLng(41.37360801504986,2.188721432119489)];
 					
-				var polOpt = {
-					path: polpoints,
-					map: map,
-					strokeColor:'#ff0000'
-				};	
-				
-				var trayecto = new google.maps.Polyline(polOpt);
+                var polOpt = {
+                  path: polpoints,
+                  map: map,
+                  strokeColor:'#ff0000'
+                };	
+                
+                var trayecto = new google.maps.Polyline(polOpt);
+
+                var init = { lat: 41.38235824929469, lng: 2.18586426794132, name:"Metro Barceloneta"};
+                
+                crearMarker(init);
+                
+                var end = { lat: 41.37360801504986, lng: 2.188721432119489, name:"Club natacio Barceloneta"};
+                crearMarker(end);
+                    
             }
+
+            function crearMarker(pinfo) {
+				var point = new google.maps.LatLng(pinfo.lat,pinfo.lng);
+				var pOptions = {
+					position: point, 
+					map: map, 
+					title: pinfo.name
+				};
+				var marker = new google.maps.Marker(pOptions);	
+				var wopt = {
+					content: '<h2>' + pinfo.name + '</h2>' 
+				}
+				var infow = new google.maps.InfoWindow(wopt);
+				google.maps.event.addListener(marker, 'click', 	function (event) {
+					infow.open(map,marker);
+				});
+				
+			}
+            
 			
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>		
@@ -107,7 +134,6 @@
         </ul>
       </li>
       <li><a id="link" href="pistascercanas.html">Pistas cercanas</a></li>
-      <li><a id="link" href="store.html">Tienda</a></li>
     </ul>
   </div>
   <img class="img-fondo"  src="img/cesped-fondo2.png" >
@@ -144,7 +170,7 @@
   modal_btn1.addEventListener("click", () => {
     createModal(`
     <h2>FELICIDADES</h2>
-    <p>Ya tienes tu códido de descuento: <strong>PADELONA30%</strong> el que puedes utilizar en nuestra tienda.</p>
+    <p>Ya tienes tu códido de descuento: <strong>PADELONA30%</strong> el que puedes utilizar en tu próxima reserva en alguno de estos clubes.</p>
     <img class="modal-img" src="img/30off.png">
     `, "modal-desdeArriba")
   })

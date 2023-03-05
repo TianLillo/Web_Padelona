@@ -14,8 +14,8 @@
             function initialize() {
 				var mapOptions = 
                 {
-                    zoom: 16,
-					center: new google.maps.LatLng(41.425268, 2.204492),
+                    zoom: 14,
+					center: new google.maps.LatLng(41.373608, 2.188728),
                     disableDefaultUI: true,
                     scaleControl: true,
                     streetViewControl: false,
@@ -64,13 +64,14 @@
                     mapOptions);
 
 					var club = {
-								name: "Padel viu",
-								latitude: 41.425268,
-								longitude: 2.204492,
-								addres: "C/ de Binèfar, 15",
-								phone: "+34 033 05 49 59",
-								img: "img/pista1.png",
-								web: "padelviu.html"
+                        name: "Club natacio Barceloneta",
+                        latitude: 41.373608,
+                        longitude: 2.188728,
+                        addres: "Plaça del Mar, s/n",
+                        phone: "+34 932 21 00 10",
+                        img: "img/pista1.png",
+                        web: "clubbarceloneta.html",
+                        route: "route.html"                   
 							};
 				crearMarker(club);
             }
@@ -133,8 +134,8 @@
 			
 		<div class="wrapper">
 			<div class="club-main">
-				<h1>Padel Viu</h1>
-				<div><img class="club-main-img" src="img/padelviu_logo.png"/></div>
+				<h1>Club de natacio Barcelona</h1>
+				<div><img class="club-main-img" src="img/nataciobcn_logo.jpg"/></div>
 				<h2>Acerca del club</h2>
 				<div>
 					<p class="club-main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nulla quis euismod porta. 
@@ -145,7 +146,7 @@
 			</div>	
 			<div class="club-profesor">
 				<h2>Profesores estrellas</h2>				
-				<img class="club-profesor-img" src="img/profesor_padelviu.jpeg"/>
+				<img class="club-profesor-img" src="img/profesores_nataciobcn.jpg"/>
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nulla quis euismod porta. 
 				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque ultrices, 
@@ -156,9 +157,9 @@
 				
 			<div class="club-pistas">
 				<h2>Nuestras pistas</h2>			
-				<img class="club-pistas-img" src="img/padelviu1.png"/>
-				<img class="club-pistas-img" src="img/padelviu2.jpg"/>
-				<img class="club-pistas-img" src="img/padelviu3.jfif"/>
+				<img class="club-pistas-img" src="img/nataciobcn1.jpg"/>
+				<img class="club-pistas-img" src="img/nataciobcn2.jfif"/>
+				<img class="club-pistas-img" src="img/nataciobcn3.jpg"/>
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nulla quis euismod porta. 
 				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque ultrices, 
@@ -172,8 +173,9 @@
 			<div class="more-info-club">
 				
 					<div class="more-info-club-text">
-						<p><strong>Dirección: </strong>C/ de Binèfar, 15</p>
-						<p><strong>Teléfono: </strong>+34 033 05 49 59"</p>
+						<p><strong>Dirección: </strong>Plaça del Mar, s/n</p>
+						<p><strong>Teléfono: </strong>+34 932 21 00 10</p>
+                        <p><strong><a class="link-comoLlegar" href="route.html">Cómo llegar</a></strong></p>
 					</div>	
 					<div id="map-canvas-club"></div>
 			</div>		
