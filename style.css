@@ -42,6 +42,12 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 .wrapper {  width:1000px; padding:20px; margin:auto; margin-top:110px; margin-bottom:0px; background-color:#f1f1f1; border:solid 2px #000000; border-top:none; border-bottom:none }
 
 #map-canvas { height:550px; width: 1000px; position: fixed; top: -15px;}
+.more-info-club{position: relative;height:350px; width: 1000px; margin-top: 30px;}
+#map-canvas-club {float: left; position: relative;height:300px; width: 500px; left: 30px;}
+.more-info-club-text{float:right; position: relative; right: 200px; top: 100px;}
+
+#map-canvas-route { height:500px; margin-bottom:20px; }
+
 
 .clubes { font-size:12px; width: 450px; height: 180px;}
 .link-moreinfo { font-size:12px; color: blue; font-weight: 900; text-decoration: underline;}
@@ -49,19 +55,19 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 
 .more-info { font-size:18px;}
 .promoted-product-item { float: center; position: relative; font-size:20px; width:600px; padding:20px 20px 40px 20px; margin:auto; 
-                    margin-bottom: 20px; border:solid 5px; color: #000000;  background-color:rgba(39, 87, 232, 0.208);
-                    -webkit-box-shadow: 4px 6px 5px 0px rgb(67, 68, 67); -moz-box-shadow: 4px 6px 5px 0px rgb(53, 53, 53);
-                    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.655) }
+                    margin-bottom: 20px; border:solid 5px; color: #000000;  background-color:#007ac042;
+                    -webkit-box-shadow: 4px 6px 5px 0px #434443; -moz-box-shadow: 4px 6px 5px 0px rgb(53, 53, 53);
+                    box-shadow: 4px 6px 5px 0px #000000a7 }
 .promoted-product-item-img-container { position:relative; top:10px; left: 50px;}
 .promoted-product-item-img { width:500px;}
 .promoted-product-item-text { margin-bottom:0;color: #000000; }
-.promoted-product-item:hover { top:-4px; background-color:rgba(83, 114, 214, 0.415);}
+.promoted-product-item:hover { top:-4px; background-color:#007ac08c;}
 
 .product-detail { font-size:20px; width:400px; padding:20px 20px 40px 20px; margin:auto; margin-bottom:20px; 
                 border:solid 10px #ff0000;	color:#ffffff; background-color:blueviolet;
-                -webkit-box-shadow: 4px 6px 5px 0px rgba(47,36,145,1);
-                -moz-box-shadow: 4px 6px 5px 0px rgba(47,36,145,1);
-                box-shadow: 4px 6px 5px 0px rgba(47,36,145,1); }
+                -webkit-box-shadow: 4px 6px 5px 0px #2f2491;
+                -moz-box-shadow: 4px 6px 5px 0px #2f2491;
+                box-shadow: 4px 6px 5px 0px #2f2491; }
 .product-image { width:150px; height:150px; border-radius:50%; }
 
 .product-item { float:left; position:relative; padding:10px 10px 10px 225px; margin-bottom:20px; margin-right:20px; width:200px;
@@ -82,11 +88,12 @@ div.menu { position:fixed; left:0; top:80px; right:0; height:30px; text-align:ce
 .club-item-img {position: relative;width:200px; height: 150px; border-radius: 10px;}
 .club-item-text {position: absolute; top:45px;left: 250px;right: 25px; margin-bottom:0; font-size: 16; font-weight: 400;}
 
-.club-main-img {position: relative; width:500px; float: left; padding-right: 30px;}
-.club-profesor{ padding-top: 80px; height: 400px; padding-left: 50px;}
-.club-profesor-img {position: relative; height:250px; float: right;}
-.club-pistas{padding-top: -30px; height: 400px; text-align: justify; padding-bottom: 50px;}
-.club-pistas-img {position: relative; height:200px; width: 280px; float: left; padding-left: 40px; padding-top: 20px; padding-bottom: 30px;}
+.club-main{height: auto; margin-bottom: 30px;}
+.club-main-img {position: relative; width:500px; float: left; padding-left: 20px; padding-right: 20px;}
+.club-profesor{ padding-top: 80px; height: auto; padding-left: 20px; padding-bottom: 80px;}
+.club-profesor-img {position: relative; height:300px;width: 500px; float: right;right: 30px; padding-left: 50px;}
+.club-pistas{padding-top: 80px; height: auto; text-align: justify; padding-left: 30px; padding-right: 30px;}
+.club-pistas-img {position: relative; height:200px; width: 280px; float: left; padding-left: 15px;padding-right: 15px ;padding-bottom: 30px;}
 
 
 .product-main-image { float: right; margin-left:20px;}

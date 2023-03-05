@@ -10,10 +10,9 @@
  
 			var map;
             function initialize() {
-                var mapOptions = 
-                {
-                    zoom: 12,
-					          center: new google.maps.LatLng(41.403952, 2.185661),
+                var mapOptions = {
+                    zoom: 15.5,
+                    center: new google.maps.LatLng(41.377727,2.188150),
                     disableDefaultUI: true,
                     scaleControl: true,
                     streetViewControl: false,
@@ -57,50 +56,33 @@
                       {featureType: "water",elementType: "geometry",stylers: [{color: "#c9c9c9"}]},
                       {featureType: "water",elementType: "labels.text.fill",stylers: [{color: "#000000"}]},
                     ],               
-                };	
-          map = new google.maps.Map(document.getElementById('map-canvas'),
-					mapOptions);			
-                
-                for (i = 0; i<clubsLocation.length; i++)  {  
-
-                  {
-                    createStation(i);
-                  }					
-      }
-      var currentInfoWindow = null;
-      function createStation(i) {
-        var point = new google.maps.LatLng(clubsLocation[i].latitude, clubsLocation[i].longitude);
-        var pOptions = {
-          position: point, 
-          map: map, 
-          title: clubsLocation[i].name
-        };
-                    var markerStation = new google.maps.Marker(pOptions);
-
-                        var infoWOpt = {
-                            content: '<div class="clubes">'
-
-                                        +'<h2>'+ clubsLocation[i].name + '</h2>' 
-                                        +'<p><strong>Dirección: </strong> ' + clubsLocation[i].addres + '</p>'
-                                        +'<p><strong>Teléfono: </strong> ' + clubsLocation[i].phone + '</p>'
-                                        +'<p><a class="link-moreinfo" href="'+ clubsLocation[i].web +'">Más información</a></p>'
-                                        +'<img class="map-product-img" src="' + clubsLocation[i].img + '" />'                                        
-                        };
-
-                        var infoWindow  = new google.maps.InfoWindow(infoWOpt);
-                        google.maps.event.addListener(markerStation, 'click', function (event) {
-                          if (currentInfoWindow != null) {
-                              currentInfoWindow.close();}
-                              infoWindow.open(map, markerStation);
-                              currentInfoWindow = infoWindow;
-                              });                        
-                    }    
-
+                };			
+				
+                map = new google.maps.Map(document.getElementById('map-canvas-route'),
+                    mapOptions);
+					
+				var polpoints = [ 
+                    new google.maps.LatLng(41.38235824929469,2.18586426794132), 
+                    new google.maps.LatLng(41.38206012083035,2.186575203549044),
+                    new google.maps.LatLng(41.38133138735792,2.186934866192292),
+                    new google.maps.LatLng(41.37582491321006,2.189145272838731),
+                    new google.maps.LatLng(41.37495413908263,2.189122691385923),
+                    new google.maps.LatLng(41.37373020709392,2.188351732700231),
+                    new google.maps.LatLng(41.37370075270262,2.188753319579781),
+                    new google.maps.LatLng(41.37360801504986,2.188721432119489)];
+					
+				var polOpt = {
+					path: polpoints,
+					map: map,
+					strokeColor:'#ff0000'
+				};	
+				
+				var trayecto = new google.maps.Polyline(polOpt);
             }
-
+			
             google.maps.event.addDomListener(window, 'load', initialize);
-        </script>	
-    </head>	
+        </script>		
+    </head>
 <body>
 	<div class="header">
     <p><a href="inicio.html"><img class="logo-img" src="img/logo_padelona_blanco.png"/></a></p>
@@ -132,11 +114,10 @@
   <img class="img-fondo2"  src="img/cesped-fondo2.png" >
 
 	<div class="wrapper">
-		<h1>Encuentra tu club más cercano</h1>
-        <div id="map-canvas"></div>
-        <p><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum nulla quis euismod porta. 
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque ultrices, 
-          nibh maximus consequat aliquet, arcu nulla feugiat felis.</p>
+		<h1>Cómo llegar a Club Natacio Barceloneta</h1>
+        <p>La forma más efectiva y directa de llegar desde la estación de metro Barceloneta</p>
+        <div id="map-canvas-route"></div>
+
         </div>
 	</div>
 

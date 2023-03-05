@@ -1,0 +1,4 @@
+                                        +'if('+ clubsLocation[i].name +' == "Club natacio Barceloneta" )'+{
+                                          '(<p><a class="link-moreinfo" href="'+ clubsLocation[i].route +'">Cómo llegar</a></p>)'
+                                        }
+                                          +'else{""}'  
